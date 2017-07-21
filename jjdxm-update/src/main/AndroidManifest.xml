@@ -1,0 +1,27 @@
+<manifest package="com.dou361.update"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--jjdxm_update更新 start-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <!--jjdxm_update更新 end-->
+
+    <application>
+        <!--jjdxm_update更新 start-->
+        <activity
+            android:name="com.dou361.update.view.UpdateDialogActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar">
+        </activity>
+        <activity
+            android:name="com.dou361.update.view.DownloadDialogActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar">
+        </activity>
+
+        <service android:name="com.dou361.update.server.DownloadingService"/>
+        <!--jjdxm_update更新 end-->
+    </application>
+
+
+</manifest>

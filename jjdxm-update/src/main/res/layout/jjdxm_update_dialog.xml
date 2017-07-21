@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#99232323">
+
+    <LinearLayout
+        android:layout_margin="30dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/jjdxm_update_dialog_bg"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/jjdxm_update_wifi_indicator"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:contentDescription="@string/jjdxm_update_gprscondition"
+                android:src="@drawable/jjdxm_update_wifi_disable"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/txt_title"
+                android:layout_toStartOf="@+id/txt_title" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/jjdxm_update_updatetitle"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:id="@+id/txt_title"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+
+        </RelativeLayout>
+
+        <!-- Content -->
+
+                <TextView
+                    android:id="@+id/jjdxm_update_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:text="@string/jjdxm_update_content"
+                    android:focusable="true"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />/>
+
+
+        <!-- Ignore CheckBox -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="15dp"
+            android:background="#c6c6c6" />
+        <CheckBox
+            android:id="@+id/jjdxm_update_id_check"
+            android:layout_width="fill_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_height="32dp"
+            android:button="@drawable/jjdxm_update_button_check_selector"
+            android:text="@string/jjdxm_update_ignore"
+            android:visibility="gone"
+            android:textColor="#000"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#c6c6c6" />
+        <!-- OK&Cancel Button -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+
+            <Button
+                android:id="@+id/jjdxm_update_id_ok"
+                android:layout_width="wrap_content"
+                android:layout_height="43dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="center"
+                android:text="@string/jjdxm_update_updatenow"
+                android:textColor="#FD4A2E"
+                android:textSize="17sp" />
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="fill_parent"
+                android:background="#c6c6c6" />
+
+            <Button
+                android:id="@+id/jjdxm_update_id_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="43dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="center"
+                android:text="@string/jjdxm_update_notnow"
+                android:textColor="#2299ee"
+                android:textSize="17sp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
